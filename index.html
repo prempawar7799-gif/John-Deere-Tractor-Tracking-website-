@@ -12,7 +12,23 @@ p{font-size:18px}
 </head>
 <body>
 <div class="card">
-<h2>John Deere Tractor Tracking</h2>
+<h2>John Deere Tractor Tracking</h2><input type="text" id="search" placeholder="Enter Mobile Number">
+
+<button onclick="check()">Search</button>
+
+<p id="result"></p>
+
+<script>
+function check(){
+var n=document.getElementById("search").value;
+
+if(n=="8971115900"){
+document.getElementById("result").innerHTML="Customer: Nanagouda<br>Model: John Deere 5050 4WD<br>Location: Bangalore Yard<br>Status: Awaiting Dispatch";
+}else{
+document.getElementById("result").innerHTML="No Record Found";
+}
+}
+</script>
 <p><b>Customer Name:</b> Nanagouda</p>
 <p><b>Tractor Model:</b> John Deere 5050 4WD</p>
 <p><b>Current Location:</b> Bangalore Yard</p>
