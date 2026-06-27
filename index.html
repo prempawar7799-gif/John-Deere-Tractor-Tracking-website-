@@ -20,25 +20,22 @@ p{font-size:18px}
 
 <script>
 function check(){
+
 var n=document.getElementById("search").value;
 
-if(n=="9535671242"){else if(n=="7204258784"){
-document.getElementById("result").innerHTML =
-"<b>Customer Name:</b> Ravikumar S/o Hanamantraya Hosur<br>" +
-"<b>Address:</b> Balashettihal, Tq. Shorapur, Dist. Yadgir<br>" +
-"<b>Mobile:</b> 7204258784<br>" +
-"<b>Tractor Model:</b> John Deere 5050 Gear Pro<br>" +
-"<b>Current Location:</b> Pune<br>" +
-"<b>Status:</b> Document Verification";
-}
+if(n=="9535671242"){
 document.getElementById("result").innerHTML="<b>Customer:</b> Nanagouda<br><b>Model:</b> John Deere 5050 4WD<br><b>Location:</b> Bangalore Yard<br><b>Status:</b> Awaiting Dispatch";
-}else{
+}
+
+else if(n=="7204258784"){
+document.getElementById("result").innerHTML="<b>Customer:</b> Ravikumar S/o Hanamantraya Hosur<br><b>Model:</b> John Deere 5050 Gear Pro<br><b>Location:</b> Pune<br><b>Status:</b> Document Verification";
+}
+
+else{
 document.getElementById("result").innerHTML="No Record Found";
 }
+
 }
-</script></div>
-</body>
-</html>
   
 
 
