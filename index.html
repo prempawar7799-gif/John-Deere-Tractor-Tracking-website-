@@ -1,56 +1,93 @@
-
+<!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>John Deere Tractor Tracking</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{font-family:Arial;background:#f4f4f4;padding:20px}
-.card{max-width:400px;margin:auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 0 10px #ccc}
-h2{text-align:center;color:green}
-p{font-size:18px}
-</style>
-</head>
-<body>
-<div class="card">
-<h2>John Deere Tractor Tracking</h2><input type="text" id="search" placeholder="Enter Mobile Number">
 
+<style>
+body{
+    font-family:Arial;
+    background:#f4f4f4;
+    padding:20px;
+}
+.card{
+    max-width:400px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px #ccc;
+}
+h2{
+    text-align:center;
+    color:green;
+}
+input{
+    width:65%;
+    padding:8px;
+}
+button{
+    padding:8px 15px;
+}
+#result{
+    margin-top:20px;
+    font-size:18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>John Deere Tractor Tracking</h2>
+
+<input type="text" id="search" placeholder="Enter Mobile Number">
 <button onclick="check()">Search</button>
 
 <p id="result"></p>
 
+</div>
+
 <script>
+
 function check(){
 
-  var n = document.getElementById("search").value;
+var n=document.getElementById("search").value.trim();
 
-  if(n=="9535671242"){
+if(n=="9535671242"){
 
-    document.getElementById("result").innerHTML =
-    "<b>Customer:</b> Nanagouda<br>" +
-    "<b>Model:</b> John Deere 5050 4WD<br>" +
-    "<b>Location:</b> Bangalore Yard<br>" +
-    "<b>Status:</b> Awaiting Dispatch";
+document.getElementById("result").innerHTML=
+"<b>Customer:</b> Nanagouda<br>"+
+"<b>Model:</b> John Deere 5050 4WD<br>"+
+"<b>Location:</b> Bangalore Yard<br>"+
+"<b>Status:</b> Awaiting Dispatch";
 
-  }
-
-  else if(n=="7204258784"){
-
-    document.getElementById("result").innerHTML =
-    "<b>Customer:</b> Ravikumar S/o Hanamantraya Hosur<br>" +
-    "<b>Address:</b> Balashettihal, Tq. Shorapur, Dist. Yadgir<br>" +
-    "<b>Mobile:</b> 7204258784<br>" +
-    "<b>Model:</b> John Deere 5050 Gear Pro<br>" +
-    "<b>Current Location:</b> Pune<br>" +
-    "<b>Status:</b> Document Verification";
-
-  }
-
-  else{
-
-    document.getElementById("result").innerHTML = "No Record Found";
 }
+
+else if(n=="7204258784"){
+
+document.getElementById("result").innerHTML=
+"<b>Customer:</b> Ravikumar S/o Hanamantraya Hosur<br>"+
+"<b>Address:</b> Balashettihal, Tq. Shorapur, Dist. Yadgir<br>"+
+"<b>Mobile:</b> 7204258784<br>"+
+"<b>Model:</b> John Deere 5050 Gear Pro<br>"+
+"<b>Current Location:</b> Pune<br>"+
+"<b>Status:</b> Document Verification";
+
 }
-  </script>
+
+else{
+
+document.getElementById("result").innerHTML="<b>No Record Found</b>";
+
+}
+
+}
+
+</script>
+
 </body>
 </html>
 
