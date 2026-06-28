@@ -1,108 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>John Deere Tractor Tracking</title>
+function check() {
 
-<style>
-body{
-font-family:Arial;
-background:#f4f4f4;
-padding:20px;
-}
+var n = document.getElementById("search").value.trim();
 
-.card{
-max-width:420px;
-margin:auto;
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 0 10px #ccc;
-}
+if (n === "9535671242") {
 
-h2{
-color:green;
-text-align:center;
-}
-
-input{
-width:65%;
-padding:10px;
-font-size:18px;
-}
-
-button{
-padding:10px 15px;
-font-size:18px;
-cursor:pointer;
-}
-
-#result{
-margin-top:20px;
-font-size:17px;
-line-height:28px;
-}
-</style>
-
-</head>
-
-<body>
-
-<div class="card">
-
-<h2>John Deere Tractor Tracking</h2>
-
-<input type="text" id="search" placeholder="Mobile / Booking ID">
-
-<button onclick="check()">Search</button>
-
-<div id="result"></div>
-
-</div>
-
-<script>
-alert("JavaScript Loaded");
-function check(){
-
-var n=document.getElementById("search").value.trim();
-
-if(n=="9535671242"){
-
-document.getElementById("result").innerHTML=
-"<b>Customer :</b> Nanagouda<br>"+
-"<b>Model :</b> John Deere 5050 4WD<br>"+
-"<b>Location :</b> Bangalore Yard<br>"+
+document.getElementById("result").innerHTML =
+"<b>Customer :</b> Nanagouda<br>" +
+"<b>Model :</b> John Deere 5050 4WD<br>" +
+"<b>Location :</b> Bangalore Yard<br>" +
 "<b>Status :</b> Awaiting Dispatch";
 
-}
+} else {
 
-else if(n=="7204258784"){
-
-document.getElementById("result").innerHTML=
-"<b>Customer :</b> Ravikumar S/o Hanamantraya Hosur<br>"+
-"<b>Address :</b> Balashettihal, Tq. Shorapur, Dist. Yadgir<br>"+
-"<b>Mobile :</b> 7204258784<br>"+
-"<b>Model :</b> John Deere 5050 Gear Pro<br>"+
-"<b>Current Location :</b> Pune<br>"+
-"<b>Status :</b> Document Verification";
-
-}
-
-else{
-
-document.getElementById("result").innerHTML="<b>No Record Found</b>";
+document.getElementById("result").innerHTML =
+"<b>No Record Found</b>";
 
 }
 
 }
-
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
